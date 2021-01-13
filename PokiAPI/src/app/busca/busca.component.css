@@ -1,0 +1,16 @@
+.centro{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 20%;
+    width: 100%;
+}
+
+.busca{
+    width: 200px;
+}
+
+.campo{
+    margin-left: 30%;
+    width: 40%;
+}
