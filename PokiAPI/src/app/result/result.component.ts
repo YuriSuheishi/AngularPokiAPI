@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokemon } from '../models/pokemon';
+import { ActivatedRoute } from "@angular/router";
 import { BuscaService } from '../busca.service';
 
 @Component({
@@ -10,11 +11,15 @@ import { BuscaService } from '../busca.service';
 export class ResultComponent implements OnInit {
   pokemon = {} as Pokemon;
 
-  constructor(private buscaService: BuscaService) { }
+  constructor(
+    private buscaService: BuscaService,
+    private route: ActivatedRoute
+    ) { }
 
 
   ngOnInit(): void {
-    this.getPokemon("1");
+    const valorPesquisa = this.route.snapshot.paramMap.get("pesquisa");
+    this.getPokemon(valorPesquisa);
   }
 
   getPokemon(value: string){
