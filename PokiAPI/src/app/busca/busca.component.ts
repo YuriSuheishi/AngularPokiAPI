@@ -6,16 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./busca.component.css']
 })
 export class BuscaComponent implements OnInit {
-  chave = 'pikachu';
+  chave;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.valor();
   }
 
   valor(){
-    var inputValue = (<HTMLInputElement>document.getElementById('InputBusca')).value;
-    this.chave = inputValue;
-    alert(inputValue);
+    this.chave = (<HTMLInputElement>document.getElementById('InputBusca')).value;
   } 
 }

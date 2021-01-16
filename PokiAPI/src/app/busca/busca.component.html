@@ -1,7 +1,6 @@
 <div class="centro">
 <div class="form-group">
-    <input type="text" class="form-control campo" value="pikachu" id="InputBusca">
+    <input type="text" class="form-control campo" (onchange)="valor()" value="raichu" id="InputBusca">
 </div>
-    <a [routerLink]="['/result/', chave]" class="btn btn-primary busca">Buscar</a>
-
+    <a [routerLink]="['/result/', chave ]"  class="btn btn-primary busca">Buscar</a>
 </div>
