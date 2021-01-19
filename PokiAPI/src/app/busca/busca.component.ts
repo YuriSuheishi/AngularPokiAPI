@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./busca.component.css']
 })
 export class BuscaComponent implements OnInit {
-  chave;
+  chave = " ";
 
   constructor() { }
 
@@ -16,5 +16,11 @@ export class BuscaComponent implements OnInit {
 
   valor(){
     this.chave = (<HTMLInputElement>document.getElementById('InputBusca')).value;
+    console.log(this.chave);
   } 
+
+  buscar(){
+    console.log((<HTMLInputElement>document.getElementById('InputBusca')).value);
+    this.valor();
+  }
 }
