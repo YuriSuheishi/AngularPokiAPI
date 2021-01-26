@@ -1,7 +1,6 @@
 <div class="centro">
 <div class="form-group">
-    <input type="text" class="form-control campo" value="raichu" id="InputBusca">
+    <input type="text" name="InputBusca" onclick="save(value)" class="form-control campo" value="lugia" id="InputBusca">
 </div>
-    <a (onclick)="buscar()" class="btn btn-primary salva">Salvar</a> &nbsp;&nbsp;
-    <a [routerLink]="['/result/', chave ]"  class="btn btn-primary busca">Buscar</a>
+    <button  (onclick)="url()" class="btn btn-primary busca">Buscar</button>
 </div>

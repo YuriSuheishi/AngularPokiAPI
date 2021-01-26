@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-busca',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class BuscaComponent implements OnInit {
   chave = " ";
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.valor();
@@ -16,11 +17,14 @@ export class BuscaComponent implements OnInit {
 
   valor(){
     this.chave = (<HTMLInputElement>document.getElementById('InputBusca')).value;
-    console.log(this.chave);
   } 
 
-  buscar(){
-    console.log((<HTMLInputElement>document.getElementById('InputBusca')).value);
-    this.valor();
+  url(){
+    this.chave = (<HTMLInputElement>document.getElementById('InputBusca')).value;
+    this.router.navigate(['/result/', this.chave]);
+  }
+
+  save(valor: string){
+    console.log(valor);
   }
 }
