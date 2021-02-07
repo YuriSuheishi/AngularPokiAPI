@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-busca',
@@ -8,23 +9,22 @@ import {Router} from '@angular/router';
 })
 export class BuscaComponent implements OnInit {
   chave = " ";
+  formulario: FormGroup;
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router, 
+    private formBuilder: FormBuilder
+  ) { }
 
   ngOnInit(): void {
-    this.valor();
+    this.formulario = this.formBuilder.group({
+      input:[null]
+    });
   }
 
-  valor(){
-    this.chave = (<HTMLInputElement>document.getElementById('InputBusca')).value;
-  } 
-
-  url(){
-    this.chave = (<HTMLInputElement>document.getElementById('InputBusca')).value;
-    this.router.navigate(['/result/', this.chave]);
-  }
-
-  save(valor: string){
-    console.log(valor);
+  onSubmit(){
+    var poke = this.formulario.value.input;
+    console.log(poke);
+    this.router.navigate(['/result/', poke]);
   }
 }

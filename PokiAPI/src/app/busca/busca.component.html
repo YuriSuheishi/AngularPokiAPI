@@ -1,6 +1,9 @@
 <div class="centro">
-<div class="form-group">
-    <input type="text" name="InputBusca" onclick="save(value)" class="form-control campo" value="lugia" id="InputBusca">
-</div>
-    <button  (onclick)="url()" class="btn btn-primary busca">Buscar</button>
+<form class="container" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <input type="text" formControlName="input" name="input" id="input" class="form-control campo">
+    </div>
+    <button type="submit" class="btn btn-primary busca">Buscar</button>
+
+</form>
 </div>
