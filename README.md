@@ -31,7 +31,7 @@ Caso o seu computador não reconheça o comando 'ng', você pode tentar:
 <br>
 
 <h1>CheckList</h1>
-<blockquote>	[x] Implementar Busca		</blockquote>
-<blockquote>	[ ] Implementar Testes		</blockquote>
-<blockquote>	[ ] Implementar a Estilização	</blockquote>
+<blockquote>	:checkbox:Implementar Busca		</blockquote>
+<blockquote>	<input type="checkbox"> Implementar Testes		</blockquote>
+<blockquote>	<input type="checkbox" checked> Implementar a Estilização	</blockquote>
 
