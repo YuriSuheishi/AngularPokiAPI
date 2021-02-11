@@ -1,5 +1,6 @@
 <h1>Busca utilizando PokiAPI</h1>
-> Status do Projeto: Em desenvolvimento :warning:
+    > Status do Projeto: Em desenvolvimento :warning:
+<br>
 Sistema Simples de Pesquisa utilizando Angular e a PokiAPI
 utilizando os recursos HTTPClient do Angular e a PokiAPI.
 <br>
@@ -18,11 +19,11 @@ Ela é uma API apenas de consumo, ou seja, só permite métodos GET.
 <br>
 <h1>Execução</h1>
 Caso todas as dependecias estejam devidamente instaladas, Basta rodar o comando: 
-> ng serve
+    > ng serve
 Caso queira abrir a página no navegador:
-> ng serve --open
+    > ng serve --open
 Caso o seu computador não reconheça o comando 'ng', você pode tentar:
-> npm run ng serve
+    > npm run ng serve
 <br>
 <h1>CheckList</h1>
 - [x] Implementar Busca
