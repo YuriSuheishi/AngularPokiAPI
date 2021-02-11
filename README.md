@@ -1,6 +1,6 @@
 
 <h1>Busca utilizando PokiAPI</h1>
-> Status do Projeto: Em desenvolvimento :warning:
+	Status do Projeto: Em desenvolvimento :warning:
 
 <br>
 Sistema Simples de Pesquisa utilizando Angular e a PokiAPI
@@ -32,7 +32,7 @@ Caso o seu computador não reconheça o comando 'ng', você pode tentar:
 <br>
 
 <h1>CheckList</h1>
-    >- [x] Implementar Busca
-	>- [ ] Implementar Testes
-    >- [ ] Implementar a Estilização
+	[x] Implementar Busca
+	[ ] Implementar Testes
+	[ ] Implementar a Estilização
 
