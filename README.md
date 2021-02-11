@@ -35,3 +35,14 @@ Caso o seu computador não reconheça o comando 'ng', você pode tentar:
 <blockquote>	<input type="checkbox"> Implementar Testes		</blockquote>
 <blockquote>	<input type="checkbox" checked> Implementar a Estilização	</blockquote>
 
+### Solar System Exploration, 1950s – 1960s
+
+- [ ] Mercury
+- [x] Venus
+- [x] Earth (Orbit/Moon)
+- [x] Mars
+- [ ] Jupiter
+- [ ] Saturn
+- [ ] Uranus
+- [ ] Neptune
+- [ ] Comet Haley
