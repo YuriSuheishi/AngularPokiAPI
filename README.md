@@ -25,7 +25,7 @@ Caso queira abrir a página no navegador:
 Caso o seu computador não reconheça o comando 'ng', você pode tentar:
     > npm run ng serve
 <br>
-<h1>CheckList</h1>
+###CheckList
 - [x] Implementar Busca
 - [ ] Implementar Testes
 - [ ] Implementar a Estilização
