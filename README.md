@@ -26,7 +26,15 @@ Caso queira abrir a página no navegador:
 <blockquote>    ng serve --open </blockquote>
 
 Caso o seu computador não reconheça o comando 'ng', você pode tentar:
- <blockquote>   >npm run ng serve </blockquote>
+ <blockquote>   npm run ng serve </blockquote>
+
+<br>
+
+<h1>Testes</h1>
+Inicialmente estou apenas testando se ele encontra o escrito PokiAPI na tag H1 <br>
+Para Rodar os testes, use um dos comandos: <br>
+ <blockquote>   ng e2e  </blockquote> 
+ <blockquote>   npm run ng e2e  </blockquote>
    
 <br>
 
