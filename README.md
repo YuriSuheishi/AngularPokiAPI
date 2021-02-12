@@ -19,7 +19,7 @@ Ela não precisa de autenticação, esse foi um dos principais motivos que me le
 Ela é uma API apenas de consumo, ou seja, só permite métodos GET.
 <br>
 <h1>Execução</h1>
-Caso todas as dependecias estejam devidamente instaladas, Basta rodar o comando: 
+Caso todas as dependecias estejam devidamente instaladas, Basta entrar na pasta PokiAPI e rodar o comando: 
 <blockquote>	ng serve </blockquote>
 
 Caso queira abrir a página no navegador:
@@ -32,7 +32,7 @@ Caso o seu computador não reconheça o comando 'ng', você pode tentar:
 
 <h1>Testes</h1>
 Inicialmente estou apenas testando se ele encontra o escrito PokiAPI na tag H1 <br>
-Para Rodar os testes, use um dos comandos: <br>
+Para Rodar os testes, use um dos comandos: <br><br>
  <blockquote>   ng e2e  </blockquote> 
  <blockquote>   npm run ng e2e  </blockquote>
    

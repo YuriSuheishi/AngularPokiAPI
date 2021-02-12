@@ -8,4 +8,6 @@ export class AppPage {
   async getTitleText(): Promise<string> {
     return element(by.css('app-root h1')).getText();
   }
+
+  busca = element(by.name('input'))
 }
