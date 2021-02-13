@@ -1,7 +1,7 @@
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
-describe('workspace-project App', () => {
+describe('PokiAPI tests', () => {
   let page: AppPage;
 
   beforeEach(() => {
@@ -24,4 +24,22 @@ describe('workspace-project App', () => {
     expect<any>(page.busca.getAttribute('value')).toEqual('pikachu');
   });
 
+  //terceiro teste, pesquisa indo para /result
+  it('Pesquisando', () => {
+    page.botao.click();
+    page.espera(3000);
+    //espera que vá para result
+    expect(browser.getCurrentUrl()).toMatch("/result");
+  });
+
+
+  //quarto teste, valor correto
+  it('Pesquisando valor correto', () => {
+    //preenche campo
+    page.busca.sendKeys('pikachu');
+    page.botao.click();
+    page.espera(3000);
+    //espera que vá para result/pikachu
+    expect(browser.getCurrentUrl()).toMatch("/result/pikachu");
+  });
 });
