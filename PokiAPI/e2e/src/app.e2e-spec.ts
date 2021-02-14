@@ -25,7 +25,7 @@ describe('PokiAPI tests', () => {
   });
 
   //terceiro teste, pesquisa indo para /result
-  it('Pesquisando', () => {
+  it('Rota correta', () => {
     page.botao.click();
     page.espera(3000);
     //espera que vá para result
@@ -34,12 +34,23 @@ describe('PokiAPI tests', () => {
 
 
   //quarto teste, valor correto
-  it('Pesquisando valor correto', () => {
+  it('Pesquisando valor digitado', () => {
     //preenche campo
     page.busca.sendKeys('pikachu');
     page.botao.click();
     page.espera(3000);
     //espera que vá para result/pikachu
     expect(browser.getCurrentUrl()).toMatch("/result/pikachu");
+  });
+
+  //quinto teste, resultado correto
+  it('Resultado igual ao valor pesquisado', () => {
+    //preenche campo
+    page.busca.sendKeys('pikachu');
+    page.botao.click();
+    page.espera(3000);
+    //espera que vá para result/pikachu
+    expect(page.getResult()).toMatch("pikachu");
+
   });
 });

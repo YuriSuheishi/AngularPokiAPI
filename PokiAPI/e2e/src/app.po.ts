@@ -10,7 +10,7 @@ export class AppPage {
   }
 
   async getResult(): Promise<string> {
-    return element(by.css('app-root p'))
+    return element(by.css('app-root')).getText();
   }
 
   espera = (milisegundos:number) => {
