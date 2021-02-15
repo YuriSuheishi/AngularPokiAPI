@@ -8,14 +8,7 @@ describe('PokiAPI tests', () => {
     page = new AppPage();
   });
 
-  //teste a ser executado
-  it('Titulo PokiAPI na tag H1', async () => {
-    await page.navigateTo();
-    //espera que o texto dentro da tag h1 seja igual PokiAPI
-    expect(await page.getTitleText()).toEqual('PokiAPI');
-  });
-
-  //segundo teste 
+  //teste 1
   it('Preenchendo formulário corretamente',() => {
     //preenche campo
     page.busca.sendKeys('pikachu');
@@ -24,7 +17,7 @@ describe('PokiAPI tests', () => {
     expect<any>(page.busca.getAttribute('value')).toEqual('pikachu');
   });
 
-  //terceiro teste, pesquisa indo para /result
+  //teste 2
   it('Rota correta', () => {
     page.botao.click();
     page.espera(3000);
@@ -33,7 +26,7 @@ describe('PokiAPI tests', () => {
   });
 
 
-  //quarto teste, valor correto
+  //teste 3
   it('Pesquisando valor digitado', () => {
     //preenche campo
     page.busca.sendKeys('pikachu');
@@ -43,14 +36,25 @@ describe('PokiAPI tests', () => {
     expect(browser.getCurrentUrl()).toMatch("/result/pikachu");
   });
 
-  //quinto teste, resultado correto
+  //teste 4
   it('Resultado igual ao valor pesquisado', () => {
     //preenche campo
-    page.busca.sendKeys('pikachu');
+    page.busca.sendKeys('12');
     page.botao.click();
     page.espera(3000);
-    //espera que vá para result/pikachu
-    expect(page.getResult()).toMatch("pikachu");
+    //espera que vá para result/12
+    expect(page.getResult()).toMatch("12");
 
+  });
+
+  //teste 
+  it('Pesquisa valor inexistente', () => {
+    //preenche campo
+    page.busca.sendKeys('tls123');
+    page.botao.click();
+    page.espera(3000);
+    //espera que não encontre valor inexistente
+    expect(page.getResult()).toMatch("inexistente");
+    //p
   });
 });

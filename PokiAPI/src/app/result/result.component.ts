@@ -10,6 +10,7 @@ import { BuscaService } from '../busca.service';
 })
 export class ResultComponent implements OnInit {
   pokemon = {} as Pokemon;
+  urlValue = "x";
 
   constructor(
     private buscaService: BuscaService,
@@ -18,8 +19,8 @@ export class ResultComponent implements OnInit {
 
 
   ngOnInit(): void {
-    const valorPesquisa = this.route.snapshot.paramMap.get("pesquisa");
-    this.getPokemon(valorPesquisa);
+    this.urlValue = this.route.snapshot.paramMap.get("pesquisa");
+    this.getPokemon(this.urlValue);
   }
 
   getPokemon(value: string){
