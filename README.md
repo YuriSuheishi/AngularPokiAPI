@@ -11,6 +11,7 @@ utilizando os recursos HTTPClient do Angular e a PokiAPI.
 <li>CSS</li>
 <li>JavaScript</li>
 <li>TypeScript</li>
+<li>Protractor</li>
 </ul>
 <br>
 <h1>PokiAPI</h1>
@@ -42,5 +43,5 @@ Para Rodar os testes, use um dos comandos: <br><br>
 
 
 - [x] Implementar Busca	
-- [ ] Implementar Testes e2e
 - [ ] Implementar a Estilização
+- [x] Implementar Testes e2e

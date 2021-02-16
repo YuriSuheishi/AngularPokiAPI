@@ -1,13 +1,21 @@
 <div class="centro">    
     <div *ngIf="pokemon.id; else elseBlock">
-        <p>{{pokemon.id}}</p>
-        <p>{{pokemon.name}}</p>
-        <p><img src={{pokemon.sprites.front_default}} width="100" height="100"></p>
-    </div>
+        <div class="txt">
+        <h2>Nome: {{pokemon.name}}</h2>
+        <h4>ID: {{pokemon.id}}</h4>
+        <h4>Tipo: <span *ngFor="let p of pokemon.types"> {{p.type.name}}</span></h4>
+        <h4>Peso: {{pokemon.weight /10}}Kg</h4>
+        <h4>Altura: {{pokemon.height /10}}m</h4>
+        <h4>Cadeia de Evolução</h4>
+        </div>
 
+        <div class="img"><p><img src={{pokemon.sprites.front_default}} width="100%"></p></div>
+    
+    </div>
+    
     <ng-template #elseBlock>
         <h2>Pokemon, ou ID inexistente!</h2>
     </ng-template>
-    <p><a routerLink="" class="btn btn-primary busca">Voltar</a></p>
 </div>
 
+<div class="botao"><a routerLink="" class="btn btn-primary ">Voltar</a></div>
