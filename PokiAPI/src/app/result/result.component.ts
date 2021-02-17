@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokemon } from '../models/pokemon';
+import { Evolve } from '../models/evolve';
 import { ActivatedRoute } from "@angular/router";
 import { BuscaService } from '../busca.service';
 
@@ -10,6 +11,7 @@ import { BuscaService } from '../busca.service';
 })
 export class ResultComponent implements OnInit {
   pokemon = {} as Pokemon;
+  evolve = {} as Evolve;
   urlValue = "x";
 
   constructor(
@@ -21,12 +23,20 @@ export class ResultComponent implements OnInit {
   ngOnInit(): void {
     this.urlValue = this.route.snapshot.paramMap.get("pesquisa");
     this.getPokemon(this.urlValue);
+    this.getEvolucao();
   }
 
   getPokemon(value: string){
-    this.buscaService.getPokeById(value).subscribe((pokemon:Pokemon ) => {
+    this.buscaService.getPokeById(value).subscribe((pokemon:Pokemon) => {
       this.pokemon = pokemon;
     });
+  }
+
+  getEvolucao(){
+    this.buscaService.getEvolve().subscribe((evolve:Evolve) => {
+      this.evolve = evolve;
+    });
+    console.log(this.evolve.id);
   }
 
 }
