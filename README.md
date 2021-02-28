@@ -32,7 +32,8 @@ Caso o seu computador não reconheça o comando 'ng', você pode tentar:
 <br>
 
 <h1>Testes</h1>
-Inicialmente estou apenas testando se ele encontra o escrito PokiAPI na tag H1 <br>
+Testa se formulário está sendo preenchido. Verifica se as rota de busca está correta, e se a rota esta com o mesmo valor do campo digitado, <br>
+Checa se o valor pesquisado aparece na página de resultado, e caso o valor não exista se exibe a mensagem de erro corretamente. <br>
 Para Rodar os testes, use um dos comandos: <br><br>
  <blockquote>   ng e2e  </blockquote> 
  <blockquote>   npm run ng e2e  </blockquote>
@@ -41,7 +42,7 @@ Para Rodar os testes, use um dos comandos: <br><br>
 
 ### Checklist
 
-
 - [x] Implementar Busca	
-- [ ] Implementar a Estilização
+- [x] Implementar a Estilização
 - [x] Implementar Testes e2e
+- [ ] Criar Pokedex
